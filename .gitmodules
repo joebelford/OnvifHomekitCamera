@@ -1,6 +1,3 @@
 [submodule "HomeKitADK"]
 	path = HomeKitADK
 	url = git@github.com:joebelford/HomeKitADK.git
-[submodule "homekit_camera"]
-	path = homekit_camera
-	url = git@github.com:joebelford/homekit_camera.git
