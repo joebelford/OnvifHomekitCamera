@@ -10,13 +10,26 @@ git submodule add git@github.com:joebelford/HomeKitADK.git
 cd HomeKitADK
 git fetch
 git switch submodule-base
+cd ..
+git commit -am "Added HomeKitADK submodule"
 ```
 
 ### homekit_camera
-Execute:
+Perform the following steps from within the HomeKitADK repo:
 ```bash
-git submodule add git@github.com:joebelford/homekit_camera.git
-cd homekit_camera
+cd Applications
+git submodule add git@github.com:joebelford/homekit_camera.git Camera
+cd Camera
 git fetch
 git switch feature-camera
+cd ../..
+git commit -am "Added homekit_camera submodule"
+```
+
+## Building Camera app
+Execute:
+```bash
+cd HomeKitADK
+cd ..
+make TARGET=Linux APPS=Camera DOCKER=1
 ```
