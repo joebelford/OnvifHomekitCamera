@@ -13,8 +13,7 @@
 		"ms-vscode.cpptools",
 		"ms-vscode.cpptools-extension-pack",
 		"ms-vscode.cpptools-themes",
-		"ms-vscode.makefile-tools",
-		"jeff-hykin.better-cpp-syntax"
+		"ms-vscode.makefile-tools"
 	],
 
 	// Features to add to the dev container. More info: https://containers.dev/features.

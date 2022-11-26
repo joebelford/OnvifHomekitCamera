@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "defines": [
+                "IP",
+                "DHAP_ENABLE_DEVELOPMENT_ONLY_CODE=1"
+            ],
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "intelliSenseMode": "linux-clang-x64",
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c17",
+            "cppStandard": "gnu++14",
+            "configurationProvider": "ms-vscode.makefile-tools",
+            "compilerArgs": [
+                "-Wall",
+                "-Wextra",
+                "-Werror"
+            ]
+        }
+    ],
+    "version": 4
+}
