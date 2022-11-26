@@ -26,6 +26,15 @@ cd ../..
 git commit -am "Added homekit_camera submodule"
 ```
 
+### ffmpeg
+Execute:
+```bash
+git submodule add git://source.ffmpeg.org/ffmpeg
+cd ffmpeg
+git pull
+cd ..
+git commit -am "Added ffmpeg submodule"
+```
 ## Building Camera app
 Execute:
 ```bash
