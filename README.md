@@ -35,10 +35,23 @@ git pull
 cd ..
 git commit -am "Added ffmpeg submodule"
 ```
-## Building Camera app
+
+## Set up build environment
+
+## Building ffmpeg Docker image
+Build this container before opening dev container.
 Execute:
+```bash
+cd ffmpegDocker
+docker build -t joeshouse/ffmpeg .
+
+## Building Camera app
+Once launched into the dev container, execute:
 ```bash
 cd HomeKitADK
 cd ..
-make TARGET=Linux APPS=Camera DOCKER=1
+make TARGET=Linux APPS=Camera DOCKER=0
 ```
+
+## Reference
+[ffmpeg guide](https://trac.ffmpeg.org/wiki/CompilationGuide/Ubuntu)

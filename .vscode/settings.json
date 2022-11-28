@@ -1,6 +1,10 @@
 {
     "files.associations": {
         "pthread.h": "c",
-        "util_base64.h": "c"
+        "util_base64.h": "c",
+        "app.h": "c",
+        "ffmpeg.h": "c",
+        "avformat.h": "c",
+        "imgutils.h": "c"
     }
 }

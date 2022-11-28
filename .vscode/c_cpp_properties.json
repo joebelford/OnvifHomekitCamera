@@ -7,7 +7,8 @@
                 "DHAP_ENABLE_DEVELOPMENT_ONLY_CODE=1"
             ],
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/ffmpeg/**",
+                "${workspaceFolder}/HomeKitADK/**"
             ],
             "intelliSenseMode": "linux-clang-x64",
             "compilerPath": "/usr/bin/clang",
