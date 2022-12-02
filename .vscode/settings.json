@@ -5,6 +5,8 @@
         "app.h": "c",
         "ffmpeg.h": "c",
         "avformat.h": "c",
-        "imgutils.h": "c"
+        "imgutils.h": "c",
+        "curl.h": "c",
+        "turbojpeg.h": "c"
     }
 }

@@ -1,0 +1,25 @@
+From c73902eea4e84b2a92d765c59cd44297af99fff9 Mon Sep 17 00:00:00 2001
+From: Joe Belford <joebelford@gmail.com>
+Date: Sat, 26 Nov 2022 20:57:29 +0000
+Subject: [PATCH] fixed SSRC U_INT issue
+
+---
+ libavformat/rtpenc.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/libavformat/rtpenc.c b/libavformat/rtpenc.c
+index ce629a80954..bb935afd54b 100644
+--- a/libavformat/rtpenc.c
++++ b/libavformat/rtpenc.c
+@@ -31,7 +31,7 @@
+ static const AVOption options[] = {
+     FF_RTP_FLAG_OPTS(RTPMuxContext, flags),
+     { "payload_type", "Specify RTP payload type", offsetof(RTPMuxContext, payload_type), AV_OPT_TYPE_INT, {.i64 = -1 }, -1, 127, AV_OPT_FLAG_ENCODING_PARAM },
+-    { "ssrc", "Stream identifier", offsetof(RTPMuxContext, ssrc), AV_OPT_TYPE_INT, { .i64 = 0 }, INT_MIN, INT_MAX, AV_OPT_FLAG_ENCODING_PARAM },
++    { "ssrc", "Stream identifier", offsetof(RTPMuxContext, ssrc), AV_OPT_TYPE_CONST, { .i64 = 0 }, 0, UINT_MAX, AV_OPT_FLAG_ENCODING_PARAM },
+     { "cname", "CNAME to include in RTCP SR packets", offsetof(RTPMuxContext, cname), AV_OPT_TYPE_STRING, { .str = NULL }, 0, 0, AV_OPT_FLAG_ENCODING_PARAM },
+     { "seq", "Starting sequence number", offsetof(RTPMuxContext, seq), AV_OPT_TYPE_INT, { .i64 = -1 }, -1, 65535, AV_OPT_FLAG_ENCODING_PARAM },
+     { NULL },
+-- 
+2.17.1
+

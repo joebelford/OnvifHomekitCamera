@@ -18,6 +18,9 @@ RUN echo ========== Install dependencies ========== \
     avahi-daemon \
     avahi-utils \
     libnss-mdns \
+    libcurl4-openssl-dev \
+    libtinfo5 \
+    libturbojpeg0-dev \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
 # RUN sed -i.bak -e 's/^#\(enable-dbus=\).*$/\1no/' /etc/avahi/avahi-daemon.conf \
